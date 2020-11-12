@@ -2,9 +2,16 @@ import React,{useState} from 'react'
 import rooms from './roominfo'
 
 
-function sortbyprice(value){
+function sortbypriceLowtoHigh(value){
 
-return rooms.filter((room)=>(room.price==value))
+   return rooms.sort((a,b) => a-b);
+
+}
+
+
+function sortbypriceHightoLow(value){
+
+   return rooms.sort((a,b) => b-a);
 
 }
 
